@@ -1,0 +1,19 @@
+# Rust build output — never commit this
+/target/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Env
+.env
+.env.local
+
+# NOTE: Cargo.lock and flake.lock ARE intentionally committed.
+# For a binary crate, Cargo.lock ensures reproducible builds.

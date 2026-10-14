@@ -1,0 +1,43 @@
+[package]
+name = "ember-mug"
+version = "0.1.0"
+edition = "2021"
+description = "A native Rust TUI for controlling your Ember Mug – no Node required"
+license = "MIT"
+
+[[bin]]
+name = "ember-mug"
+path = "src/main.rs"
+
+[dependencies]
+# Bluetooth LE
+btleplug = "0.11"
+
+# TUI
+ratatui = "0.28"
+crossterm = { version = "0.28", features = ["event-stream"] }
+
+# Async runtime
+tokio = { version = "1", features = ["full"] }
+tokio-stream = "0.1"
+futures = "0.3"
+
+# Serialisation (settings persistence)
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+
+# Platform config/data dirs
+dirs = "5"
+
+# UUIDs
+uuid = { version = "1", features = ["v4"] }
+
+# Error handling
+anyhow = "1"
+
+# Logging (enabled with RUST_LOG=debug)
+log = "0.4"
+env_logger = "0.11"
+
+# UDSK generation
+rand = "0.8"
